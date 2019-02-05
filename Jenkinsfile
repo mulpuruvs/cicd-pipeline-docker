@@ -17,7 +17,7 @@ pipeline {
     		}
     		steps {
     			script {
-    				app = docker.build("DocCred/cicd-pipeline-docker")
+    				app = docker.build("/mulpuruvsdockerid/cicd-pipeline-docker")
     				app.inside {
     					sh 'echo $(curl localhost:8080)'
     				}

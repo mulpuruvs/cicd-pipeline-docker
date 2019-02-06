@@ -18,7 +18,6 @@ pipeline {
 					app.inside {
 						sh 'echo $(curl http://54.212.127.94:8080)'
 						}
-
 					}
 				}
 		    }
@@ -31,10 +30,9 @@ pipeline {
 						app.push('latest')
 						}
 					}
-				}	
+				}
 
-		}
+			}
 	    
-    }        
-}
+    	}       
 }

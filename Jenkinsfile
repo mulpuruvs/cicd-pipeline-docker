@@ -17,9 +17,9 @@ pipeline {
     		}
     		steps {
     			script {
-    				app = docker.build("/jenkins")
+    				app = docker.build("mulpuruvs/jenkins-app")
     				app.inside {
-    					sh 'echo $(curl localhost:8080)'
+    					sh 'echo $(curl 54.212.127.94:8080)'
     				}
     
     			}
@@ -33,7 +33,7 @@ pipeline {
     		}
     		steps {
     			script {
-    				docker.withRegistry('https://registry.hub.docker.com', 'mulpuruvsdockerid') {
+    				docker.withRegistry('https://registry.hub.docker.com', 'DocCred') {
                         	app.push('${env.BUILD_NUMBER') 
     				    app.push('latest')
     				}

@@ -14,7 +14,7 @@ pipeline {
 		stage('Build Docker image') {
 			steps {
 				script {
-					app = docker.build("mulpuruvs/jenkins-app")
+					app = docker.build("mulpuruvsdockerid/jenkins-app")
 					app.inside {
 						sh 'echo $(curl http://54.212.127.94:8080)'
 						}
